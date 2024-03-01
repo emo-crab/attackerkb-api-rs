@@ -6,6 +6,7 @@ use uuid::Uuid;
 
 #[derive(Debug, Serialize, Deserialize, PartialEq, Clone, Builder)]
 #[builder(setter(into), default)]
+#[serde(rename_all = "camelCase")]
 pub struct TopicsParameters {
   /// The UUID of a specific topic to return.
   /// Example: c0f010fe-da9c-4aa6-b898-c57d483df51b
@@ -111,6 +112,7 @@ impl Default for TopicsParameters {
 
 #[derive(Debug, Serialize, Deserialize, PartialEq, Clone, Builder)]
 #[builder(setter(into), default)]
+#[serde(rename_all = "camelCase")]
 pub struct AssessmentsParameters {
   /// The UUID of a specific assessment to return.
   /// Example: c0f010fe-da9c-4aa6-b898-c57d483df51b
@@ -192,6 +194,7 @@ impl Default for AssessmentsParameters {
 
 #[derive(Debug, Serialize, Deserialize, PartialEq, Clone, Builder)]
 #[builder(setter(into), default)]
+#[serde(rename_all = "camelCase")]
 pub struct ContributorsParameters {
   /// The UUID of a specific contributor to return.
   /// Example: c0f010fe-da9c-4aa6-b898-c57d483df51b
