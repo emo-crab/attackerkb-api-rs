@@ -1,9 +1,9 @@
 [package]
 name = "attackerkb-api-rs" #改这个
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["Kali-Team <root@kali-team.cn>"]
-description = "A rust implementation of the nvd-cve."
+description = "Rust Library for AttackerKB API"
 homepage = "https://github.com/emo-crab/attackerkb-api-rs"
 repository = "https://github.com/emo-crab/attackerkb-api-rs"
 readme = "README.md"
