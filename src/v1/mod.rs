@@ -135,7 +135,10 @@ impl Default for CveState {
 pub struct Credits {
   #[serde(default)]
   pub discovered_by: Vec<String>,
+  #[serde(default)]
   pub module: Vec<String>,
+  #[serde(default)]
+  pub reporter: Vec<String>,
 }
 
 /// Condensed version of a related object. The returned attributes are reduced as not to cause noise with the parent object. These full objects can be returned by specifying their type in the expand parameter.

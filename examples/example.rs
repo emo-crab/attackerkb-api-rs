@@ -11,7 +11,7 @@ async fn main() {
     .q(Some("cve-2023-46805".into()))
     .build()
     .unwrap();
-  let list_resp = api.topics(query).await.unwrap();
+  let list_resp = api.topics(&query).await.unwrap();
   println!("{:#?}", list_resp);
   let single_resp = api
     .topic("40a59992-3535-439c-a358-ec629cfa6115")

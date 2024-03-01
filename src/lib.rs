@@ -100,7 +100,7 @@ impl AttackKBApi {
 
 impl AttackKBApi {
   /// Return all topics.
-  pub async fn topics(&self, query: TopicsParameters) -> Result<KBResponse, Error> {
+  pub async fn topics(&self, query: &TopicsParameters) -> Result<KBResponse, Error> {
     let u = format!("{}/{}/{}", self.base_path, self.version, "topics");
     self.request(self.client.get(u).query(&query)).await
   }
@@ -116,7 +116,7 @@ impl AttackKBApi {
     self.request(self.client.get(u)).await
   }
   /// Return all assessments.
-  pub async fn assessments(&self, query: AssessmentsParameters) -> Result<KBResponse, Error> {
+  pub async fn assessments(&self, query: &AssessmentsParameters) -> Result<KBResponse, Error> {
     let u = format!("{}/{}/{}", self.base_path, self.version, "assessments");
     self.request(self.client.get(u).query(&query)).await
   }
@@ -132,7 +132,7 @@ impl AttackKBApi {
     self.request(self.client.get(u)).await
   }
   /// Return all contributors.
-  pub async fn contributors(&self, query: ContributorsParameters) -> Result<KBResponse, Error> {
+  pub async fn contributors(&self, query: &ContributorsParameters) -> Result<KBResponse, Error> {
     let u = format!("{}/{}/{}", self.base_path, self.version, "contributors");
     self.request(self.client.get(u).query(&query)).await
   }
